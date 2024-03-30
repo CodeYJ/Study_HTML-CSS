@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>인제대학교 사이버강의실</title>
+    <style>
+        body {
+            /*배경 영역의 스타일*/
+            font-family: 돋움;
+            background-image: url('https://injelms.inje.ac.kr/theme/coursemosv2/pix/login/loginpage_1.jpg');
+            background-size: cover;
+            /*드래그로 인한 화면 크기의 변화에 맞춰 배경을 자동으로 확대 및 축소*/
+            background-repeat: no-repeat;
+            /*중복된 이미지 없이 하나의 이미지로 설정*/
+            padding: 10px 10px 10px 20px;
+        }
+
+        .login {
+            /*로그인 영역의 스타일*/
+            float: left;
+            /*왼쪽으로 정렬*/
+            margin: 50px 0px 10px 13px;
+            padding: 0px 15px 0px 15px;
+            width: 250px;
+            height: 190px;
+            border: none;
+            background-color: rgb(35, 55, 129)
+        }
+
+        .menu {
+            /*로그인창 오른편의 링크 메뉴 영역의 스타일*/
+            float: left;
+            /*왼쪽으로 정렬하여 로그인 영역 옆에 표시*/
+            margin: 50px 312px 10px 13px;
+            padding: 0px 15px 0px 15px;
+            width: 130px;
+            height: 190px;
+            border: none;
+            background-color: rgb(84, 86, 94)
+        }
+
+        .notice {
+            /*공지사항 영역의 스타일*/
+            margin: 260px 0px 0px 15px;
+            padding: 0px 30px 10px 0px;
+            width: 500px;
+            height: 200px;
+            background-color: rgb(255, 255, 255, 0.9);
+        }
+
+        .notice2 {
+            /*공지사항 하단의 4개의 박스영역의 스타일*/
+            margin: 20px 0px 0px 15px;
+            width: 100px;
+            height: 40px;
+            background-color: rgba(153, 153, 153, 0.9);
+            float: left;
+            /*여러개를 생성시에 왼쪽부터 쌓이도록*/
+        }
+
+        .p {
+            /*로그인 영역의 LOGIN폰트 스타일*/
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            margin: 0px 0px 25px 0px;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .p2 {
+            /*로그인 영역의 사용자이름 기억폰트 스타일*/
+            font-size: 11px;
+            color: rgb(192, 225, 240);
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        .i1 {
+            /*로그인 영역의 아이디 입력창의 스타일*/
+            width: 160px;
+            height: 27px;
+            background-color: rgb(236, 248, 253);
+        }
+
+        .i2 {
+            /*로그인 영역의 패스워드 입력창의 스타일*/
+            width: 160px;
+            height: 27px;
+            background-color: rgb(236, 248, 253);
+            margin: 0px 0px 20px 0px;
+        }
+
+        .d {
+            /*로그인 버튼의 스타일*/
+            width: 80px;
+            height: 66px;
+            background-color: rgb(250, 85, 168);
+            /*배경색*/
+            color: rgb(255, 255, 255);
+            /*글자색*/
+            float: right;
+        }
+
+        nav ul li {
+            /*링크 메뉴 영역의 목록 스타일*/
+            display: inline-block;
+            margin: 0px 0px 11px 0px;
+        }
+
+        ul li {
+            /*공지사항 영역의 목록 스타일*/
+            font-size: 13px;
+            margin: 0px 0px 13px 0px;
+
+        }
+
+        .menu1 {
+            /*링크 메뉴 영역내의 이미지 스타일*/
+            margin: 8px 0px 0px 0px;
+            width: 20;
+            height: 160;
+            float: left;
+        }
+
+        .a {
+            /*링크 메뉴영역의 폰트 스타일*/
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 11px;
+            list-style-type: none;
+        }
+
+        a:hover {
+            /*하이퍼링크에 마우스 커서를 올리면 적용되는 스타일*/
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+        }
+
+        .a2 {
+            /*공지사항 목록의 폰트 스타일*/
+            color: rgb(138, 144, 148);
+            text-decoration: none;
+            font-size: 13px;
+            list-style-type: none;
+        }
+
+        .a3 {
+            /*하단바 영역의 개인정보처리방침의 폰트 스타일*/
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 11px;
+            list-style-type: none;
+        }
+
+        #a {
+            /*공지사항의 + 이미지의 위치 지정을 위한 스타일*/
+            margin: 15px 0px 0px 0px;
+            float: right;
+        }
+
+        #b {
+            /*공지사항 영역의 공지사항 폰트의 위치 지정을 위한 스타일*/
+            float: left;
+            margin: 0px 0px 0px 20px;
+            font-size: 14px;
+        }
+
+        #k {
+            /*하단바 영역의 div스타일*/
+            margin: 20px 0px 0px 20px;
+            font-size: 12px;
+            color: rgb(82, 76, 76);
+        }
+
+        .c {
+            width: 500px;
+            height: 41px;
+
+        }
+
+        .c1 {
+            /*배경 영역에 짤리는 부분을 채우기 위해 공간 할당*/
+            width: 500px;
+            height: 400px;
+
+        }
+
+        pre {
+            /*공지사항 하단의 4개 박스안의 폰트 스타일*/
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            margin: 12px 0px 0px 10px;
+        }
+
+        #footer {
+            /*웹 페이지의 크기가 변해도 하단에 고정되는 고정바*/
+            position: fixed;
+            background-color: rgb(56, 59, 56);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div><a href="http://injelms.inje.ac.kr/login.php"><img
+                    src="https://injelms.inje.ac.kr/theme/coursemosv2/pix/layout/logo.png" alt="인제대학교 사이버강의실"></a></div>
+    </section>
+    <section>
+        <div class="login">
+            <p class="p">LOGIN</p>
+            <form>
+                <input class="i1" type="text" id="id">
+                <input class="d" type="submit" value="로그인">
+                <input class="i2" type="password" id="password">
+                <label class="p2"><input type="checkbox" name="user1" value="user"> 사용자이름 기억</label>
+            </form>
+        </div>
+        <div class="menu" id="box1">
+            <div class="menu1">
+                <img src="https://injelms.inje.ac.kr/theme/coursemosv2/pix/login/login_family_icon.png"
+                    alt="인제대학교 포털사이트">
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="a" href="https://www.inje.ac.kr/kor/main/main.asp">인제대학교</a></li>
+                    <li><a class="a" href="https://stud.inje.ac.kr">종합정보시스템</a></li>
+                    <li><a class="a" href="https://library.inje.ac.kr">도서관</a></li>
+                    <li><a class="a" href="http://www.ijnews.net">인제신문사</a></li>
+                    <li><a class="a" href="https://ctl.inje.ac.kr/ctl/index.do">대학교육혁신처</a></li>
+                    <li><a class="a" href="linc.inje.ac.kr">인제대학교linc+</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </section>
+    <section>
+        <div class="notice">
+            <div>
+                <div id="b">
+                    <h4>공지사항</h4>
+                </div>
+                <a id="a" href="https://injelms.inje.ac.kr/mod/ubboard/view.php?id=1"><img
+                        src="https://injelms.inje.ac.kr/theme/coursemosv2/pix/login/login-notice-more.png"
+                        alt="공지사항 더보기"></a>
+            </div>
+            <div class="c">
+            </div>
+            <ul>
+                <li><a class="a2" href="#">[완료][서버 점검 안내]2022.04.14(목) 17:30부터 서버 점검 안내</a></li>
+                <li><a class="a2" href="#">[공지] 사이버강의실 정상화 구동 안내(2022.03.17 14:30)</a></li>
+                <li><a class="a2" href="#">[온라인 수업 대상_공지] 교과목 강좌 수업 동영상 업로드 및 오라인 상호작용 지연 안내</a></li>
+                <li><a class="a2" href="#">[학생 로그인 수정 완료]학생 이용자 로그인 수정 완료안내</a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="notice2">
+            <pre>Q&A      <a href="https://injelms.inje.ac.kr/mod/ubboard/view.php?id=2"><img src="https://injelms.inje.ac.kr/theme/coursemosv2/pix/login/login-buttonset-bg.png"></a></pre>
+        </div>
+        <div class="notice2">
+            <pre>공지사항  <a href="https://injelms.inje.ac.kr/mod/ubboard/view.php?id=1"><img src="https://injelms.inje.ac.kr/theme/coursemosv2/pix/login/login-buttonset-bg.png"></a></pre>
+        </div>
+        <div class="notice2">
+            <pre>메뉴얼    <a href="https://injelms.inje.ac.kr/local/ubion/manual/"><img src="https://injelms.inje.ac.kr/theme/coursemosv2/pix/login/login-buttonset-bg.png"></a></pre>
+        </div>
+        <div class="notice2">
+            <pre>FAQ      <a href="https://injelms.inje.ac.kr/mod/ubboard/view.php?id=3"><img src="https://injelms.inje.ac.kr/theme/coursemosv2/pix/login/login-buttonset-bg.png"></a></pre>
+        </div>
+    </section>
+
+    <div class="c1"></div>
+    <section>
+        <div id="footer">
+            <b>
+                <div id="k"><a class="a3" href="https://www.inje.ac.kr/kor/etc/privacy-policy.asp">개인정보처리방침</a>
+                    [01234]경남 김해시 인제로 ??? 인제대학교 대학교육혁신처 원격교육지원센터 Tel:055-???-????</div>
+            </b>
+        </div>
+    </section>
+</body>
+
+</html>
